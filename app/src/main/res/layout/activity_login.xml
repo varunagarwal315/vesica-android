@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.varun.vesica.LoginActivity"
+    >
+
+    <ScrollView
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/vesica_logo"
+                android:layout_marginTop="48dp"
+                android:layout_width="164dp"
+                android:layout_height="136dp"
+                />
+
+                <com.example.varun.vesica.widget.MyTextView
+                    android:visibility="gone"
+                    android:id="@+id/tv_error"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:textColor="#ff0000"
+                    android:layout_marginTop="48dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <EditText
+                    android:id="@+id/et_username"
+                    android:hint="Enter Username"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="48dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+                <EditText
+                    android:id="@+id/et_password"
+                    android:hint="Enter Password"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="5dp"
+                    android:inputType="textPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="100dp"
+                    />
+
+        </LinearLayout>
+    </ScrollView>
+
+        <com.example.varun.vesica.widget.MyButton
+            android:id="@+id/btn_chat_one"
+            android:text="Chat from nodes"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#ffffff"
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/btn_login_selector"
+            />
+
+</LinearLayout>

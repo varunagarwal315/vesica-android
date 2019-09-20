@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.example.varun.vesica">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+    <application
+        android:name=".baseclass.VesicaApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ConversationActivity">
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".receiver.ScreenshotReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_SCANNER_SCAN_FILE"/>
+                <action android:name="android.intent.action.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".ChatOverviewActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".ChatRoomsActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <service
+            android:name=".services.SocketService"
+            android:enabled="true"
+            android:exported="false">
+        </service>
+
+        <activity
+            android:name=".NewConversationActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".AddUserActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <receiver
+            android:name=".receiver.InitSocketReceiver"
+            android:enabled="true"
+            android:exported="false">
+        </receiver>
+
+        <activity android:name=".TestActivity">
+        </activity>
+    </application>
+
+</manifest>
